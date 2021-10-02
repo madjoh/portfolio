@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACL,gBAAgB,EAAE,mlkBAA0C;CAC/D",
+    "sources": [
+        "pattern.scss"
+    ],
+    "names": [],
+    "file": "pattern.css"
+}
