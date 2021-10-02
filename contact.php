@@ -28,6 +28,7 @@ else : ?>
 <?php 
 endif;
 ////////////////// IF SLUT
+//hejhej
 ?>
 
 <?php get_footer(); ?>
