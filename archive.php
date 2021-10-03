@@ -1,7 +1,6 @@
   <?php get_header(); ?>
     <section class="portfolio">
-     <h2 class="heading"><?php the_archive_title();?></h2>
-      
+        <h2 class="heading"><?php the_archive_title();?></h2>  
       <nav class="portfoliomenu">
       <?php
       wp_nav_menu(array(

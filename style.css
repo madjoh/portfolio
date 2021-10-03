@@ -181,6 +181,9 @@ header .show {
       flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -189,55 +192,41 @@ header .show {
   }
 }
 
-.aboutcontainer main .illustration {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 2rem;
-}
-
-@media (min-width: 768px) {
-  .aboutcontainer main .illustration {
-    padding-left: 2rem;
+@media (min-width: 1000px) {
+  .aboutcontainer main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.aboutcontainer main .illustration img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  max-width: 417px;
-  margin: auto;
-}
-
-@media (min-width: 768px) {
-  .aboutcontainer main .illustration {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: auto;
-    height: 100%;
-  }
-  .aboutcontainer main .illustration img {
-    margin: auto;
-    width: auto;
-    height: 100%;
-  }
+.aboutcontainer main .pfbtn {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .aboutcontainer main .text {
   text-align: center;
+  margin: 2rem;
 }
 
 @media (min-width: 768px) {
   .aboutcontainer main .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    width: 50%;
   }
 }
 
@@ -280,8 +269,16 @@ header .show {
   }
 }
 
-.aboutcontainer p {
+.aboutcontainer main .abouttext {
+  max-width: 600px;
+}
+
+.aboutcontainer .skillsection {
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+.aboutcontainer p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -295,7 +292,7 @@ header .show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2.5rem 2rem 1rem 2rem;
+  padding: 0 2rem 1rem 2rem;
   width: 90%;
 }
 
@@ -464,6 +461,7 @@ header .show {
   font-size: 1.1rem;
   line-height: 1.5rem;
   text-align: center;
+  margin: 0 2rem;
 }
 
 @media (min-width: 768px) {
@@ -476,6 +474,7 @@ header .show {
   .container main .text h3 {
     text-align: left;
     line-height: 2rem;
+    margin: 0;
   }
 }
 
@@ -484,7 +483,7 @@ header .show {
 }
 
 .container main .text .sidebar {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,6 +497,7 @@ header .show {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin-top: 2rem;
   }
 }
 
@@ -569,7 +569,7 @@ header .show {
 
 .heading {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: inline-block;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #f7ede2), color-stop(55%, #f6bd60));
   background-image: linear-gradient(#f7ede2 60%, #f6bd60 55%);
@@ -779,14 +779,8 @@ footer p {
   background-color: #f7ede2;
   margin: auto;
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 1rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -840,19 +834,12 @@ footer p {
   }
 }
 
-@media (min-width: 1200px) {
-  .portfolio .pf a article img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-
 .portfolio .pf a article img:hover {
   opacity: 0.5;
 }
 
 .portfolio .heading {
-  margin-top: 0.8rem;
+  margin: 3rem 0;
 }
 
 .portfolio .pinkbtn {
@@ -1127,7 +1114,7 @@ footer p {
   border: none;
   height: 52px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   padding: 1rem 2.5rem;
   margin-top: 1rem;
   font-size: 1rem;

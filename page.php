@@ -10,8 +10,9 @@ if (have_posts()) :
         <div class="illustration" >
           <?php the_post_thumbnail();?>
         </div>
+        <div class="abouttext">
         <div class="text">
-          <h2 class="heading"><?php the_title();?></h2>
+          <div><h2 class="heading"><?php the_title();?></h2></div>
          <p><?php the_content(); ?></p>
         </div> 
         <div class="pfbtn">
@@ -20,14 +21,16 @@ if (have_posts()) :
             <?php $titlePage = get_the_title(11);?>
               <a href="<?php echo site_url($titlePage); ?>" class="blackbtn">Contact me</a>
         </div>
+      </div>
       </main>
-      <h2 class="heading"><?php the_field('skillsheading'); ?></h2>
-      <p><?php the_field('skillstext'); ?></p>
+     
       
       <?php $skillsgroup = get_field('skills'); 
        if($skillsgroup) : 
        //Hämtar värden på skillsbar från WP där min är 0 och max är 11?>
         <div class="skills">
+        <div class="skillsection"><h2 class="heading"><?php the_field('skillsheading'); ?></h2>
+      <p><?php the_field('skillstext'); ?></p></div>
         <label for="gd"><?php echo $skillsgroup['headingskills_1'];?></label>
         <input type="range" value="<?php echo $skillsgroup['skillsbar_1'];?>" min="0" max="11" disabled />
         <label for="hcj"><?php echo $skillsgroup['headingskills_2'];?></label>

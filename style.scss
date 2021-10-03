@@ -29,8 +29,8 @@ header {
 
     @media (min-width: 1024px) {
       width: 14em;
+    }
   }
-}
 
   .logo {
     margin-left: 1rem;
@@ -157,44 +157,29 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+    justify-content: center;
 
     @media (min-width: 768px) {
       height: 400px;
     }
- 
-    .illustration {
-      display: flex;
-      justify-content: center;
-      padding-top: 2rem;
+    @media (min-width: 1000px) {
+      flex-direction: column;
+    }
 
-      @media (min-width: 768px) {
-        padding-left: 2rem;
-      }
-      img {
-        object-fit: cover;
-        width: 100%;
-        max-width: 417px;
-        margin: auto;
-      }
-
-      @media (min-width: 768px) {
-        flex: 0 0 auto;
-        width: auto;
-        height: 100%;
-
-        img {
-          margin: auto;
-          width: auto;
-          height: 100%;
-        }
-      }
+    .pfbtn {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     .text {
       text-align: center;
+      margin: 2rem;
       @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         flex: 0 0 50%;
-        width: 50%;
       }
 
       @media (min-width: 1200px) {
@@ -227,10 +212,15 @@ header {
         }
       }
     }
+    .abouttext {
+      max-width: 600px;
+    }
   }
-
-  p {
+  .skillsection {
     text-align: center;
+    margin-bottom: 2rem;
+  }
+  p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -239,7 +229,7 @@ header {
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding: 2.5rem 2rem 1rem 2rem;
+    padding: 0 2rem 1rem 2rem;
     width: 90%;
 
     @media (min-width: 660px) {
@@ -319,7 +309,6 @@ header {
       justify-content: flex-end;
       padding: 0 2rem;
 
-
       @media (min-width: 1024px) {
         flex: 0 0 50%;
       }
@@ -327,10 +316,9 @@ header {
       .illustration {
         width: 100%;
         @media (min-width: 1024px) {
-          width: 70%; 
-          
-        }      
-      } 
+          width: 70%;
+        }
+      }
     }
 
     .text {
@@ -343,10 +331,10 @@ header {
         padding-right: 1rem;
         padding-left: 2rem;
       }
-      
+
       h1 {
         font-size: 2rem;
-        text-align: center; 
+        text-align: center;
         margin: 2.3rem 2.5rem 1rem 2.5rem;
 
         @media (min-width: 768px) {
@@ -365,14 +353,15 @@ header {
         font-size: 1.1rem;
         line-height: 1.5rem;
         text-align: center;
+        margin: 0 2rem;
 
         @media (min-width: 768px) {
           font-size: 1.2rem;
-         
         }
         @media (min-width: 1024px) {
           text-align: left;
-          line-height: 2rem; 
+          line-height: 2rem;
+          margin: 0;
         }
 
         p {
@@ -381,12 +370,13 @@ header {
       }
 
       .sidebar {
-        margin-top: 2rem;
+        margin-top: 1rem;
         display: flex;
         justify-content: center;
 
         @media (min-width: 1024px) {
           justify-content: flex-start;
+          margin-top: 2rem;
         }
 
         & > div {
@@ -449,26 +439,25 @@ header {
 
 .heading {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: inline-block;
   background-image: linear-gradient($beigebg 60%, $yellow 55%);
 
   @media (min-width: 768px) {
     margin-bottom: 1rem;
-}
+  }
 }
 
 .pattern {
-  background: top / 400% auto; 
+  background: top / 400% auto;
 
   @media (min-width: 768px) {
-    background: top / 300% auto; 
-}
+    background: top / 300% auto;
+  }
 
   @media (min-width: 1200px) {
-    background: top / 160% auto; 
-}
-
+    background: top / 160% auto;
+  }
 }
 
 .latestprojects {
@@ -482,11 +471,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
   }
 
   .postcards {
-
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -497,7 +484,7 @@ header {
     @media (min-width: 1000px) {
       flex: 0 0 100%;
     }
-  
+
     a {
       text-decoration: none;
       color: black;
@@ -510,25 +497,24 @@ header {
       @media (min-width: 768px) {
         //flex: 0 0 340px;
         flex: 0 0 50%;
-      } 
+      }
 
       @media (min-width: 1100px) {
         //flex: 0 0 333px;
         flex: 0 0 25%;
-      } 
-
+      }
 
       .card {
         background-color: white;
         border-radius: 15px;
-       
-        margin: 1rem 1rem 1.5rem 1rem; 
+
+        margin: 1rem 1rem 1.5rem 1rem;
         box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2),
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-          @media (min-width: 768px) {
-            margin: 0 1rem 2rem 1rem;
-          } 
+        @media (min-width: 768px) {
+          margin: 0 1rem 2rem 1rem;
+        }
 
         .cardname {
           text-align: end;
@@ -541,13 +527,12 @@ header {
         width: 100%;
         height: 280px;
         object-fit: cover;
-        border-top-right-radius: 15px ;
+        border-top-right-radius: 15px;
         border-top-left-radius: 15px;
-      
       }
     }
   }
-  .pinkbtn{
+  .pinkbtn {
     margin: 1rem;
   }
 }
@@ -614,9 +599,8 @@ footer {
   background-color: $beigebg;
   margin: auto;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
   margin-top: 1rem;
+  text-align: center;
 
   .pf {
     @media (min-width: 768px) {
@@ -650,10 +634,6 @@ footer {
             height: 250px;
           }
 
-          @media (min-width: 1200px) {
-            object-fit: cover;
-          }
-
           &:hover {
             opacity: 0.5;
           }
@@ -663,7 +643,7 @@ footer {
   }
 
   .heading {
-    margin-top: 0.8rem;
+    margin: 3rem 0;
   }
 
   .pinkbtn {
@@ -867,7 +847,7 @@ footer {
         border: none;
         height: 52px;
         border: none;
-        border-radius: 5px;
+        border-radius: 30px;
         padding: 1rem 2.5rem;
         margin-top: 1rem;
         font-size: 1rem;
