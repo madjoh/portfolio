@@ -1,2 +1,2 @@
 # portfolio
-My portfoliosite built with PHP/SCSS/JavaScript for Wordpress.
+WORK IN PROGRESS... -> My portfoliosite built with PHP/SCSS/JavaScript for Wordpress.
